@@ -839,6 +839,8 @@
     <Content Include="ShopTemplates\Products\Details.cshtml" />
     <Content Include="ShopTemplates\Products\Edit.cshtml" />
     <Content Include="ShopTemplates\Products\Index.cshtml" />
+    <Content Include="ShopTemplates\Products\offer.pdf" />
+    <Content Include="Views\Products\offer.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
