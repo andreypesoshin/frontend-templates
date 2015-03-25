@@ -238,17 +238,13 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="ShopTemplates\_ViewStart.cshtml" />
-    <Content Include="ShopTemplates\Shared\_Layout.cshtml" />
-    <Content Include="ShopTemplates\Shared\_LoginPartial.cshtml" />
-    <Content Include="ShopTemplates\Shared\Error.cshtml" />
-    <Content Include="ShopTemplates\Shared\Lockout.cshtml" />
     <Content Include="ShopTemplates\Web.config" />
     <Content Include="Views\Products\Create.cshtml" />
     <Content Include="Views\Products\Delete.cshtml" />
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="ShopTemplates\Products\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

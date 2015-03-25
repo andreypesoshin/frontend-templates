@@ -14,13 +14,13 @@ namespace FrontendTemplates.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Products1
+        // GET: Products
         public ActionResult Index()
         {
             return View(db.Products.ToList());
         }
 
-        // GET: Products1/Details/5
+        // GET: Products/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,13 +35,27 @@ namespace FrontendTemplates.Controllers
             return View(product);
         }
 
-        // GET: Products1/Create
+        // GET: Products/Details/5
+        public ActionResult DetailsShopTemplates(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Product product = db.Products.Find(id);
+            if (product == null)
+            {
+                return HttpNotFound();
+            }
+            return View("~/ShopTemplates/Products/Details.cshtml", product);
+        }
+        // GET: Products/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Products1/Create
+        // POST: Products/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -58,7 +72,7 @@ namespace FrontendTemplates.Controllers
             return View(product);
         }
 
-        // GET: Products1/Edit/5
+        // GET: Products/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -73,7 +87,7 @@ namespace FrontendTemplates.Controllers
             return View(product);
         }
 
-        // POST: Products1/Edit/5
+        // POST: Products/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -89,7 +103,7 @@ namespace FrontendTemplates.Controllers
             return View(product);
         }
 
-        // GET: Products1/Delete/5
+        // GET: Products/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -104,7 +118,7 @@ namespace FrontendTemplates.Controllers
             return View(product);
         }
 
-        // POST: Products1/Delete/5
+        // POST: Products/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
