@@ -14,13 +14,13 @@ namespace FrontendTemplates.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Products
+        // GET: Products1
         public ActionResult Index()
         {
             return View(db.Products.ToList());
         }
 
-        // GET: Products/Details/5
+        // GET: Products1/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,34 +35,18 @@ namespace FrontendTemplates.Controllers
             return View(product);
         }
 
-        // GET: Products/Details/5
-        public ActionResult DetailsShopTemplates(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Product product = db.Products.Find(id);
-            if (product == null)
-            {
-                return HttpNotFound();
-            }
-            return View("Details", product);
-        }
-
-
-        // GET: Products/Create
+        // GET: Products1/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Products/Create
+        // POST: Products1/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id")] Product product)
+        public ActionResult Create([Bind(Include = "Id,Name,Price")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -74,7 +58,7 @@ namespace FrontendTemplates.Controllers
             return View(product);
         }
 
-        // GET: Products/Edit/5
+        // GET: Products1/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -89,12 +73,12 @@ namespace FrontendTemplates.Controllers
             return View(product);
         }
 
-        // POST: Products/Edit/5
+        // POST: Products1/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id")] Product product)
+        public ActionResult Edit([Bind(Include = "Id,Name,Price")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -105,7 +89,7 @@ namespace FrontendTemplates.Controllers
             return View(product);
         }
 
-        // GET: Products/Delete/5
+        // GET: Products1/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -120,7 +104,7 @@ namespace FrontendTemplates.Controllers
             return View(product);
         }
 
-        // POST: Products/Delete/5
+        // POST: Products1/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

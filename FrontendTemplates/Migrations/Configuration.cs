@@ -1,3 +1,5 @@
+using FrontendTemplates.Models;
+
 namespace FrontendTemplates.Migrations
 {
     using System;
@@ -16,16 +18,14 @@ namespace FrontendTemplates.Migrations
         {
             //  This method will be called after migrating to the latest version.
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            context.Products.AddOrUpdate(
+                p => p.Name,
+                new Product { Name = "Блузка", Price = 1000 },
+                new Product { Name = "Сережки", Price = 2000 },
+                new Product { Name = "Часы", Price = 3000 },
+                new Product { Name = "Сумка", Price = 4000 },
+                new Product { Name = "Сапоги", Price = 5000 }
+                );
         }
     }
 }

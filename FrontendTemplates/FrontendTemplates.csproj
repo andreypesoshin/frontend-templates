@@ -169,6 +169,10 @@
     <Compile Include="Migrations\201503251415193_Initial.Designer.cs">
       <DependentUpon>201503251415193_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503251420500_AddedNameAndPriceToProduct.cs" />
+    <Compile Include="Migrations\201503251420500_AddedNameAndPriceToProduct.Designer.cs">
+      <DependentUpon>201503251420500_AddedNameAndPriceToProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -234,17 +238,17 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Products\Create.cshtml" />
-    <Content Include="Views\Products\Delete.cshtml" />
-    <Content Include="Views\Products\Details.cshtml" />
-    <Content Include="Views\Products\Edit.cshtml" />
-    <Content Include="Views\Products\Index.cshtml" />
     <Content Include="ShopTemplates\_ViewStart.cshtml" />
     <Content Include="ShopTemplates\Shared\_Layout.cshtml" />
     <Content Include="ShopTemplates\Shared\_LoginPartial.cshtml" />
     <Content Include="ShopTemplates\Shared\Error.cshtml" />
     <Content Include="ShopTemplates\Shared\Lockout.cshtml" />
     <Content Include="ShopTemplates\Web.config" />
+    <Content Include="Views\Products\Create.cshtml" />
+    <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -260,6 +264,9 @@
     <EmbeddedResource Include="Migrations\201503251415193_Initial.resx">
       <DependentUpon>201503251415193_Initial.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503251420500_AddedNameAndPriceToProduct.resx">
+      <DependentUpon>201503251420500_AddedNameAndPriceToProduct.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
