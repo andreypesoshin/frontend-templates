@@ -165,6 +165,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503251415193_Initial.cs" />
+    <Compile Include="Migrations\201503251415193_Initial.Designer.cs">
+      <DependentUpon>201503251415193_Initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -235,6 +239,12 @@
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="ShopTemplates\_ViewStart.cshtml" />
+    <Content Include="ShopTemplates\Shared\_Layout.cshtml" />
+    <Content Include="ShopTemplates\Shared\_LoginPartial.cshtml" />
+    <Content Include="ShopTemplates\Shared\Error.cshtml" />
+    <Content Include="ShopTemplates\Shared\Lockout.cshtml" />
+    <Content Include="ShopTemplates\Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -245,6 +255,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201503251415193_Initial.resx">
+      <DependentUpon>201503251415193_Initial.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
