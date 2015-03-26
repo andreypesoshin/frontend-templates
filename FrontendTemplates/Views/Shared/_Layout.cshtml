@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    @Html.RenderCssBundle("~/Content/app.css.bundle", BundleOptions.MinifiedAndCombined)
+    @Html.RenderJsBundle("~/Scripts/modernizr.js.bundle", BundleOptions.MinifiedAndCombined)
 </head>
 <body>
     @{
@@ -20,8 +20,9 @@
         }
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    @Html.RenderJsBundle("~/Scripts/jquery.js.bundle", BundleOptions.MinifiedAndCombined)
+    @Html.RenderJsBundle("~/Scripts/bootstrap.js.bundle", BundleOptions.MinifiedAndCombined)
+
+    @*RenderSection("scripts", required: true)*@
 </body>
 </html>

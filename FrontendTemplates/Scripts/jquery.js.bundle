@@ -1,0 +1,4 @@
+﻿#options outputbundleonly 
+jquery-1.10.2.js
+jquery.validate.js
+jquery.validate.unobtrusive.js

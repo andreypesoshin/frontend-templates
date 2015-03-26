@@ -163,7 +163,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
-    <Compile Include="Controllers\ProductsServiceStackBundledController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -657,14 +656,13 @@
     <Content Include="bundler\node_modules\stylus\node_modules\sax\test\xmlns-xml-default-redefine.js" />
     <Content Include="bundler\node_modules\uglify-js.js" />
     <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <None Include="Content\app.css.bundle" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="README.txt" />
     <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="bundler\uglifyjs" />
     <Content Include="bundler\package.json" />
     <Content Include="bundler\node_modules\stylus\Readme.md" />
@@ -781,18 +779,13 @@
     <Content Include="bundler\LICENSE" />
     <Content Include="bundler\coffee.cmd" />
     <Content Include="bundler\bundler.cmd" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\modernizr.js.bundle" />
     <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -803,11 +796,10 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_StandardBundlerLayout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -834,15 +826,11 @@
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Products\offer.pdf" />
-    <Content Include="Views\ProductsServiceStackBundled\Create.cshtml" />
-    <Content Include="Views\ProductsServiceStackBundled\Delete.cshtml" />
-    <Content Include="Views\ProductsServiceStackBundled\Details.cshtml" />
-    <Content Include="Views\ProductsServiceStackBundled\Edit.cshtml" />
-    <Content Include="Views\ProductsServiceStackBundled\Index.cshtml" />
-    <Content Include="Views\Shared\_ServiceStackBundledLayout.cshtml" />
-    <Content Include="Views\Shared\_CommonLayoutSections.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Scripts\jquery.js.bundle" />
+    <Content Include="Scripts\bootstrap.js.bundle" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
