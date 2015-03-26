@@ -1,18 +1,22 @@
 ﻿@model BundleOptions
 
-<h2>Bundling Hint</h2>
+<h2>Bundling option</h2>
 @switch (Model)
 {
     case BundleOptions.Normal:
-        <p>You are in <b>DEVELOPMENT mode</b>. All assets are used as is.</p>
+        <p>You are in <b>DEVELOPMENT mode</b>.</p>
+        <p>All assets are used as is.</p>
         break;
     case BundleOptions.Combined:
-    <p>You are in <b>TEST mode</b>. All assets are combined together (separate files for css and js bundles) and used without minification.</p>
+        <p>You are in <b>TEST mode</b>.</p>
+        <p>All assets are combined together (separate files for css and js bundles) and used without minification.</p>
         break;
     case BundleOptions.MinifiedAndCombined:
-    <p>You are in <b>PRODUCTION mode</b>. All assets are combined together and minified.</p>
+        <p>You are in <b>PRODUCTION mode</b>.</p>
+        <p>All assets are combined together and minified.</p>
         break;
 }
+<h2>Bundles</h2>
 <p>We have 3 bundles used at this page (you can always reorganize assets as you want):</p>
 <ul>
     <li>app.css.bundle</li>
@@ -20,7 +24,11 @@
     <li>app.js.bundle</li>
 </ul>
 
+<h2>Source code</h2>
+<p>The source code is ...</p>
+
+<h2>Result code</h2>
 <p>Please feel free to inspect page source and checkout <strong>&lt;head&gt;</strong> section to confirm that bundles are processed as expected.</p>
 
-Personally for your comfort we have added the head context into the <strong>blockquote</strong> above:
-<blockquote></blockquote>
+Personally for your comfort we have added the <strong>&lt;head&gt;</strong> context into the next block:
+<pre></pre>
