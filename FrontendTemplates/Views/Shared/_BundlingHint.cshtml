@@ -1,0 +1,24 @@
+﻿@model BundleOptions
+
+<h2>Bundling Hint</h2>
+@switch (Model)
+{
+    case BundleOptions.Normal:
+        <p>You are in <b>DEVELOPMENT mode</b>. All assets are used as is.</p>
+        break;
+    case BundleOptions.Combined:
+    <p>You are in <b>TEST mode</b>. All assets are combined together (separate files for css and js bundles) and used without minification.</p>
+        break;
+    case BundleOptions.MinifiedAndCombined:
+    <p>You are in <b>PRODUCTION mode</b>. All assets are combined together and minified.</p>
+        break;
+}
+<p>We have 4 bundles used for this page (you can always reorganize assets as you want):</p>
+<ul>
+    <li>app.css.bundle</li>
+    <li>modernizr.js.bundle</li>
+    <li>jquery.js.bundle</li>
+    <li>bootstrap.js.bundle</li>
+</ul>
+<p>Please feel free to inspect page source and checkout <strong>&lt;head&gt;</strong> and <strong>&lt;body&gt;</strong> (bottom part) sections to confirm that bundles are processed as expected.</p>
+
