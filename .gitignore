@@ -1,4 +1,10 @@
 ###################
+# Minified and bundled files
+###################
+*.min.js
+*.min.css
+
+###################
 # compiled source #
 ###################
 *.com

@@ -27,6 +27,7 @@ namespace FrontendTemplates.Controllers
                     break;
             }
 
+            ViewBag.BundleOption = bundleOption;
 
             return View(bundleOption);
         }

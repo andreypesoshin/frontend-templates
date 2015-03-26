@@ -15,7 +15,7 @@
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 *@
                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                <li>@Html.ActionLink("Demo: Development mode", "Demo", "Home", new { @env = "dev" })</li>
+                <li>@Html.ActionLink("Demo: Development mode", "Demo", "Home", new { @env = "dev" }, null)</li>
                 <li>@Html.ActionLink("Demo: Test mode", "Demo", "Home", new { @env = "test" }, null)</li>
                 <li>@Html.ActionLink("Demo: Production mode", "Demo", "Home", new { @env = "prod" }, null)</li>
             </ul>
