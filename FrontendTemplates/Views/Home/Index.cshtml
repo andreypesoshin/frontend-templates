@@ -6,7 +6,7 @@
     <h1>ServiceStack Bundler</h1>
     <p>A demo project to see ServiceStack Bundler in action. YMMV, you know.</p>
 
-    <p>Just open @Html.ActionLink("Demo page", "Index", "Products") and checkout the source code to get an idea.</p>
+    <p>Just open @Html.ActionLink("Demo page", "Index", "Products", new { env = "prod" }) and checkout the source code to get an idea.</p>
 </div>
 
 <div class="row">
@@ -17,6 +17,14 @@
             <li>Backend machines (restricted to Win)</li>
             <li>Test server (via TeamCity)</li>
             <li>Production server</li>
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <h2>Demo cases</h2>
+        <ul>
+            <li>@Html.ActionLink("Development mode", "Index", "Products", new { @env = "dev" }, null)</li>
+            <li>@Html.ActionLink("Testing mode", "Index", "Products", new { @env = "test" }, null)</li>
+            <li>@Html.ActionLink("Production mode", "Index", "Products", new { @env = "prod" }, null)</li>
         </ul>
     </div>
     <div class="col-md-4">

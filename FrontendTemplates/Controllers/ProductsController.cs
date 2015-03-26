@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using FrontendTemplates.Models;
+using ServiceStack.Html;
 
 namespace FrontendTemplates.Controllers
 {
@@ -122,6 +123,32 @@ namespace FrontendTemplates.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        protected override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            var env = filterContext.Controller.ValueProvider.GetValue("env");
+            
+            var bundleOption = BundleOptions.Normal;
+
+            if (env != null)
+            {
+                var envString = env.AttemptedValue.ToLower();
+
+                switch (envString)
+                {
+                    case "test":
+                        bundleOption = BundleOptions.Combined;
+                        break;
+                    case "prod":
+                        bundleOption = BundleOptions.MinifiedAndCombined;
+                        break;
+                }
+            }
+
+            ViewBag.BundleOption = bundleOption;
+
+            base.OnActionExecuting(filterContext);
         }
     }
 }

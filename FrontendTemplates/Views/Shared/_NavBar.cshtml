@@ -15,7 +15,9 @@
                         <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 *@
                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                <li>@Html.ActionLink("Demo", "Index", "Products")</li>
+                <li>@Html.ActionLink("Demo: Development mode", "Index", "Products")</li>
+                <li>@Html.ActionLink("Demo: Test mode", "Index", "Products", new { @env = "test" }, null)</li>
+                <li>@Html.ActionLink("Demo: Production mode", "Index", "Products", new { @env = "prod" }, null)</li>
             </ul>
 
             @Html.Partial("_LoginPartial")
