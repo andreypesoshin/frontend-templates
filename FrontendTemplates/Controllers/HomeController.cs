@@ -16,25 +16,11 @@ namespace FrontendTemplates.Controllers
         }
 
         [HttpGet]
-        public ActionResult Demo()
-        {
-            // auto-negotiation by parameter specified in Web.config
-            var optionParameter = ConfigurationManager.AppSettings["BundleOption"];
-
-            var bundleOption = BundleOptions.Normal;
-
-            Enum.TryParse(ConfigurationManager.AppSettings["BundleOption"], true, out bundleOption);
-
-            return View(bundleOption);
-        }
-
-        [HttpGet]
         public ActionResult Demo(string env)
         {
-            // negotiation by specified GET parameter
+            BundleOptions bundleOption;
 
-            var bundleOption = BundleOptions.Normal;
-
+            // first try negotiation by specified GET parameter
             switch (env)
             {
                 case "prod":
@@ -42,6 +28,13 @@ namespace FrontendTemplates.Controllers
                     break;
                 case "test":
                     bundleOption = BundleOptions.Combined;
+                    break;
+                case "dev":
+                    bundleOption = BundleOptions.Normal;
+                    break;
+                default:
+                    // auto-negotiation by parameter specified in Web.config
+                    Enum.TryParse(ConfigurationManager.AppSettings["BundleOption"], true, out bundleOption);
                     break;
             }
 

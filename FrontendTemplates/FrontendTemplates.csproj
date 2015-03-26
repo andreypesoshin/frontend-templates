@@ -112,44 +112,8 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Core">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Owin">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="Owin">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin">
-      <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Host.SystemWeb">
-      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security">
-      <HintPath>..\packages\Microsoft.Owin.Security.3.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Facebook">
-      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Cookies">
-      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.OAuth">
-      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Google">
-      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Twitter">
-      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
-      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -635,13 +599,6 @@
     <Content Include="bundler\node_modules\stylus\node_modules\sax\test\xmlns-xml-default-redefine.js" />
     <Content Include="bundler\node_modules\uglify-js.js" />
     <Content Include="Content\bootstrap.css" />
-    <None Include="Content\app.css.bundle" />
-    <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
-    <Content Include="README.txt" />
-    <Content Include="Scripts\bootstrap.js" />
     <Content Include="bundler\uglifyjs" />
     <Content Include="bundler\package.json" />
     <Content Include="bundler\node_modules\stylus\Readme.md" />
@@ -676,7 +633,6 @@
     <Content Include="bundler\node_modules\stylus\node_modules\css-parse\package.json" />
     <Content Include="bundler\node_modules\stylus\LICENSE" />
     <Content Include="bundler\node_modules\stylus\lib\functions\index.styl" />
-    <Content Include="bundler\node_modules\stylus\bin\stylus" />
     <Content Include="bundler\node_modules\step\package.json" />
     <Content Include="bundler\node_modules\node-sass\README.md" />
     <Content Include="bundler\node_modules\node-sass\package.json" />
@@ -692,10 +648,6 @@
     <Content Include="bundler\node_modules\node-sass\node_modules\node-sass-middleware\node_modules\mkdirp\LICENSE" />
     <Content Include="bundler\node_modules\node-sass\node_modules\node-sass-middleware\LICENSE" />
     <Content Include="bundler\node_modules\node-sass\CONTRIBUTING.md" />
-    <Content Include="bundler\node_modules\node-sass\bin\win32-x64-v8-3.14\binding.node" />
-    <Content Include="bundler\node_modules\node-sass\bin\win32-ia32-v8-3.14\binding.node" />
-    <Content Include="bundler\node_modules\node-sass\bin\node-sass" />
-    <Content Include="bundler\node_modules\node-sass\bin\darwin-x64-v8-3.14\binding.node" />
     <Content Include="bundler\node_modules\nib\Readme.md" />
     <Content Include="bundler\node_modules\nib\package.json" />
     <Content Include="bundler\node_modules\nib\node_modules\stylus\Readme.md" />
@@ -713,7 +665,6 @@
     <Content Include="bundler\node_modules\nib\node_modules\stylus\node_modules\cssom\package.json" />
     <Content Include="bundler\node_modules\nib\node_modules\stylus\LICENSE" />
     <Content Include="bundler\node_modules\nib\node_modules\stylus\lib\functions\index.styl" />
-    <Content Include="bundler\node_modules\nib\node_modules\stylus\bin\stylus" />
     <Content Include="bundler\node_modules\nib\LICENSE" />
     <Content Include="bundler\node_modules\nib\lib\nib\vendor.styl" />
     <Content Include="bundler\node_modules\nib\lib\nib\text\replace-text.styl" />
@@ -739,11 +690,7 @@
     <Content Include="bundler\node_modules\nib\iconic\iconic_stroke.otf" />
     <Content Include="bundler\node_modules\nib\iconic\iconic_stroke.eot" />
     <Content Include="bundler\node_modules\LiveScript\package.json" />
-    <Content Include="bundler\node_modules\LiveScript\bin\slake" />
-    <Content Include="bundler\node_modules\LiveScript\bin\lsc" />
-    <Content Include="bundler\node_modules\LiveScript\bin\livescript" />
     <Content Include="bundler\node_modules\less\package.json" />
-    <Content Include="bundler\node_modules\less\bin\lessc" />
     <Content Include="bundler\node_modules\debug\Readme.md" />
     <Content Include="bundler\node_modules\debug\package.json" />
     <Content Include="bundler\node_modules\debug\node_modules\ms\README.md" />
@@ -752,11 +699,28 @@
     <Content Include="bundler\node_modules\debug\History.md" />
     <Content Include="bundler\node_modules\debug\component.json" />
     <Content Include="bundler\node_modules\coffee-script\package.json" />
+    <Content Include="bundler\LICENSE" />
+    <Content Include="bundler\coffee.cmd" />
+    <None Include="Content\app.css.bundle" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="README.txt" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="bundler\node_modules\stylus\bin\stylus" />
+    <Content Include="bundler\node_modules\node-sass\bin\win32-x64-v8-3.14\binding.node" />
+    <Content Include="bundler\node_modules\node-sass\bin\win32-ia32-v8-3.14\binding.node" />
+    <Content Include="bundler\node_modules\node-sass\bin\node-sass" />
+    <Content Include="bundler\node_modules\node-sass\bin\darwin-x64-v8-3.14\binding.node" />
+    <Content Include="bundler\node_modules\nib\node_modules\stylus\bin\stylus" />
+    <Content Include="bundler\node_modules\LiveScript\bin\slake" />
+    <Content Include="bundler\node_modules\LiveScript\bin\lsc" />
+    <Content Include="bundler\node_modules\LiveScript\bin\livescript" />
+    <Content Include="bundler\node_modules\less\bin\lessc" />
     <Content Include="bundler\node_modules\coffee-script\bin\coffee" />
     <Content Include="bundler\node_modules\coffee-script\bin\cake" />
     <Content Include="bundler\node_modules\clean-css\bin\cleancss" />
-    <Content Include="bundler\LICENSE" />
-    <Content Include="bundler\coffee.cmd" />
     <Content Include="bundler\bundler.cmd" />
     <Content Include="Scripts\demo.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
