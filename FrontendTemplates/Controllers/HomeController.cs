@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -18,9 +19,13 @@ namespace FrontendTemplates.Controllers
         public ActionResult Demo()
         {
             // auto-negotiation by parameter specified in Web.config
-            var optionParameter =;
+            var optionParameter = ConfigurationManager.AppSettings["BundleOption"];
 
-            return View();
+            var bundleOption = BundleOptions.Normal;
+
+            Enum.TryParse(ConfigurationManager.AppSettings["BundleOption"], true, out bundleOption);
+
+            return View(bundleOption);
         }
 
         [HttpGet]
