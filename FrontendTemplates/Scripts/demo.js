@@ -1,4 +1,4 @@
-$(function () {
+;$(function () {
     var headHtml = $("head").html();
 
     var headHtml = headHtml
@@ -8,3 +8,4 @@ $(function () {
 
     $("blockquote").html(headHtml);
 });
+
