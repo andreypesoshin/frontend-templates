@@ -18,29 +18,27 @@ namespace FrontendTemplates.Controllers
         [HttpGet]
         public ActionResult Demo(string env)
         {
-            BundleOptions bundleOption;
 
-            // first try negotiation by specified GET parameter
-            switch (env)
+            // if the env-parameter is set via GET
+            // (otherwise use default behavior inherited from global filter)
+            if (env != null)
             {
-                case "prod":
-                    bundleOption = BundleOptions.MinifiedAndCombined;
-                    break;
-                case "test":
-                    bundleOption = BundleOptions.Combined;
-                    break;
-                case "dev":
-                    bundleOption = BundleOptions.Normal;
-                    break;
-                default:
-                    // auto-negotiation by parameter specified in Web.config
-                    Enum.TryParse(ConfigurationManager.AppSettings["BundleOption"], true, out bundleOption);
-                    break;
+                var bundleOption = BundleOptions.Normal;
+
+                switch (env)
+                {
+                    case "prod":
+                        bundleOption = BundleOptions.MinifiedAndCombined;
+                        break;
+                    case "test":
+                        bundleOption = BundleOptions.Combined;
+                        break;
+                }
+
+                ViewBag.BundleOption = bundleOption;
             }
 
-            ViewBag.BundleOption = bundleOption;
-
-            return View(bundleOption);
+            return View(ViewBag.BundleOption);
         }
     }
 }
