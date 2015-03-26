@@ -163,7 +163,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
-    <Compile Include="Controllers\ProductsShopTemplatesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -828,18 +827,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="ShopTemplates\Web.config" />
     <Content Include="Views\Products\Create.cshtml" />
     <Content Include="Views\Products\Delete.cshtml" />
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
-    <Content Include="ShopTemplates\Products\Create.cshtml" />
-    <Content Include="ShopTemplates\Products\Delete.cshtml" />
-    <Content Include="ShopTemplates\Products\Details.cshtml" />
-    <Content Include="ShopTemplates\Products\Edit.cshtml" />
-    <Content Include="ShopTemplates\Products\Index.cshtml" />
-    <Content Include="ShopTemplates\Products\offer.pdf" />
     <Content Include="Views\Products\offer.pdf" />
   </ItemGroup>
   <ItemGroup>
