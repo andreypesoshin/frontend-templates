@@ -163,6 +163,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\ProductsServiceStackBundledController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -833,6 +834,12 @@
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Products\offer.pdf" />
+    <Content Include="Views\ProductsServiceStackBundled\Create.cshtml" />
+    <Content Include="Views\ProductsServiceStackBundled\Delete.cshtml" />
+    <Content Include="Views\ProductsServiceStackBundled\Details.cshtml" />
+    <Content Include="Views\ProductsServiceStackBundled\Edit.cshtml" />
+    <Content Include="Views\ProductsServiceStackBundled\Index.cshtml" />
+    <Content Include="Views\Shared\_ServiceStackBundledLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
