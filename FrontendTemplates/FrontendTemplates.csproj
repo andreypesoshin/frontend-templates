@@ -840,9 +840,9 @@
     <Content Include="Views\ProductsServiceStackBundled\Edit.cshtml" />
     <Content Include="Views\ProductsServiceStackBundled\Index.cshtml" />
     <Content Include="Views\Shared\_ServiceStackBundledLayout.cshtml" />
-    <Content Include="Views\Shared\_NavigationList.cshtml" />
     <Content Include="Views\Shared\_CommonLayoutSections.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

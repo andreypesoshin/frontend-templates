@@ -9,8 +9,16 @@
 </head>
 <body>
     @{
-        Html.RenderPartial("_CommonLayoutSections");
+        Html.RenderPartial("_NavBar");
     }
+
+    <div class="container body-content">
+        @RenderBody()
+
+        @{
+            Html.RenderPartial("_Footer");
+        }
+    </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
