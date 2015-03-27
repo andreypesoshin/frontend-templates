@@ -25,22 +25,34 @@
 
 <p>In <strong>~/Shared/Layout.cshtml</strong> we have registered 3 asset bundles:</p>
 <pre>
+    using FrontendTemplates.Extensions;
+
     @@Html.CustomRenderCssBundle("~/Content/app.css.bundle")
     @@Html.CustomRenderJsBundle("~/Scripts/dist.js.bundle")
     @@Html.CustomRenderJsBundle("~/Scripts/app.js.bundle")
 </pre>
 
 <p>
-    Note that above code differs from the default way defined for <strong>ServiceStack Bundler</strong> project.
-</p>
-<p>
     Here we implement an option to either auto-negotiate the needed <strong>BundleOption</strong> value based on <strong>Web.config</strong> information.
-<p>
-    On this screen (only) we are also overriding a value via setting the GET parameter.
 </p>
 <p>
     Internally these custom methods are based on <strong>ViewBag.BundleOption</strong> variable that is initially set in global action filter.
 </p>
+<p>
+    On this screen (only) we are also overriding a value via setting the GET parameter and overriding a ViewBag value.
+</p>
+
+<p>
+    Note that above code differs from the default way defined for <strong>ServiceStack Bundler</strong> project.
+    The equal standard-way Razor commands are:
+</p>
+<pre>
+    using ServiceStack.Html;
+
+    @@Html.RenderCssBundle("~/Content/app.css.bundle", BundleOptions.@Model.ToString())
+    @@Html.RenderJsBundle("~/Scripts/dist.js.bundle", BundleOptions.@Model.ToString())
+    @@Html.RenderJsBundle("~/Scripts/app.js.bundle", BundleOptions.@Model.ToString())
+</pre>
 
 <h2>Result code</h2>
 <p>Please feel free to inspect page source and checkout <strong>&lt;head&gt;</strong> section to confirm that bundles are processed as expected.</p>

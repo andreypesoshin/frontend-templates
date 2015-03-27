@@ -124,7 +124,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ServiceStackBundlerExtensions.cs" />
+    <Compile Include="Extensions\ServiceStackBundlerExtensions.cs" />
     <Compile Include="Models\ServiceStackBundlerAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

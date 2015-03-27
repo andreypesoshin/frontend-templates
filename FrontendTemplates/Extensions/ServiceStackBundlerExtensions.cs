@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using ServiceStack.Html;
 
-namespace FrontendTemplates.Models
+namespace FrontendTemplates.Extensions
 {
     /* 
      * Here we have an option on how to seamlessly avoid using ViewBag.BundleOption
