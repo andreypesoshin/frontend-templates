@@ -9,8 +9,30 @@
     <p>Just checkout an @Html.ActionLink("Example page", "Demo", "Home", new { env = "prod" }, null) to get an idea.</p>
 </div>
 
+<div class="row background">
+    <div class="col-md-10">
+        <h2>Background</h2>
+    </div>
+</div>
+<div class="row problems-solution">
+    <div class="col-md-5">
+        <h3 class="problems">Problems</h3>
+        <ol>
+            <li>Assets (js, css, styles) belong to frontend developers only</li>
+            <li>They use their favorite tools - gulp, node.js - locally on their MacBooks and don't want to share the code</li>
+            <li>Backend developers do not have an abitily to modify assets code without pain</li>
+        </ol>
+    </div>
+    <div class="col-md-5">
+        <h3 class="solution">Solution</h3>
+        <p class="large">
+            Switch to <a href="https://github.com/ServiceStack/Bundler">ServiceStack Bundler</a>!
+        </p>
+    </div>
+</div>
+
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-5">
         <h2>Supported environments</h2>
         <ul>
             <li>Frontend machines (Mac OS, Win)</li>
@@ -19,9 +41,52 @@
             <li>Production server</li>
         </ul>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-5">
         <h2>Github</h2>
-        <p>Please feel free to checkout a <a href="https://github.com/andreypesoshin/frontend-templates">github page</a> if you like this demo</p>
+        <p>
+            Please feel free to checkout a <a href="https://github.com/andreypesoshin/frontend-templates">Github page</a> if you like this demo
+        </p>
     </div>
+</div>
 
+<div class="row howto">
+    <div class="col-md-10">
+        <h2>How to...</h2>
+        <h3>1. Setup runtime environment</h3>
+        <ol>
+            <li>Read official documentation at <a href="https://github.com/ServiceStack/Bundler">ServiceStack Bundler</a> github page</li>
+            <li>Pass through the standard installation steps with NuGet</li>
+            <li>Force add recently created <strong>bundler</strong> folder to git (remove it from gitignore or both if possible). It contains <strong>bundler.cmd</strong> that you will have to run often and executable files (<strong>node.exe</strong>, for instance) that are usually ignored in .NET projects.</li>
+            <li>Think about how you will store asset sources and bundles in your project's folder structure. Think about how will <strong>bundler.cmd</strong> be executed periodically or on demand in your runtime environment.</li>
+            <li><strong>NB!</strong> Store in git only source files and avoid storing intermediate or dynamically rewritten assets (.less.css, .styl.css, .min.css, .min.js, asset bundles, etc)</li>
+            <li>Think about how you will store asset sources and bundles in your project's folder structure. Think about how will <strong>bundler.cmd</strong> be executed periodically or on demand in your runtime environment.</li>
+        </ol>
+        <p><strong>Hint:</strong> For sure you can ignore an introduced syntax sugar and integrate ServiceStack in it's standard way if you want or have to do it.</p>
+
+        <h3>2. Backend developer: Setup development environment</h3>
+        <ol>
+            <li>Use your favorite Win-based PC with Visual Studio. Run <strong>bundler.cmd</strong> automatically or manually if you really want. Work inside git repository local copy.</li>
+            <li>Optionally: Install <a href="https://visualstudiogallery.msdn.microsoft.com/ac45b6e8-c462-4f81-bd1a-e29b5f47e8b5">Bundler Run on Save extension</a> for Visual Studio 2013. It could help you update all needed bundles just after <strong>Ctrl+S</strong> is pressed in Visual Studio.</li>
+            <li>Optionally: Install <a href="https://github.com/ServiceStack/Bundler#installing-the-run-on-save-vsnet-2010-extension">original extension</a> for Visual Studio 2010 if you use it.</li>
+            <li>Optionally: Add an <a href="https://github.com/ServiceStack/Bundler#create-an-external-tool-inside-vsnet">External Tool</a> command to run <strong>bundler.cmd</strong> on demand by pressing <strong>Alt+T, B</strong> key combination.</li>
+            <li>Avoid using post-build step (negotiable, for sure).</li>
+        </ol>
+
+
+        <h3>3. Frontend developer: Setup development environment</h3>
+        <ol>
+            <li>Use you favorite Mac (or Win or whatever). Work inside a git repository local copy.</li>
+            <li>Use some Win-based PC to host and run an ASP.NET application. Dev-server will work. Virtual machine, an installation on Test server or your old PC with IIS also will do. Rsync might also needed.</li>
+            <li>Optionally: In order to work with Win PC you'll have to use Razor=>Html converter that isn't tested at the moment. Will come back here soonly.</li>
+            <li>Think about how to run <strong>node bunler.js ...</strong> command as it is done in <a href="https://github.com/andreypesoshin/frontend-templates/blob/master/FrontendTemplates/bundler/bundler.cmd">bundler.cmd</a>. You can have any of the next 4 different setups. YMMV.</li>
+            <li>For instance (setup #1), install node.js and run <strong>node bunler.js ...</strong> on demand when your source files are changed in the filesystem. Use <a href="https://github.com/emcrisostomo/fswatch">fswatch utility</a> to watch for filesystem changes.</li>
+            <li>Another setup (#2) is to run <strong>node bunler.js ...</strong> periodically. For instance, with a timeout of 5 seconds. Works but has a sensible lag and utilizes more computer resources.</li>
+            <li>Another setup (#3) is to have a <strong>gulp watch task</strong> that watches for filesystem changes as it normally does and runs <strong>node bunler.js ...</strong> command.</li>
+            <li>The last setup (#4) is to use custom <strong>gulp task</strong> that performs bundles just like <strong>bundler.js</strong> does. Rendering bundles at Razor (cshtml) side should feel no difference.</li>
+        </ol>
+
+        <h3>Conslusion</h3>
+        <p>Now both backend and frontend developers should be happy using their favorite tools and having an ability to modify and bundle assets in a very comfort way.</p>
+        <p>Feel free to contact me at <a href="http://andreypesoshin.com">andreypesoshin.com</a> if you have any questions.</p>
+    </div>
 </div>

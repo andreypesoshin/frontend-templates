@@ -27,3 +27,23 @@ textarea {
 .jumbotron p.lead {
     margin-top: 30px;
 }
+
+div.howto, div.background {
+    margin-top: 30px;
+}
+
+h3.problems {
+    color: red;
+}
+
+h3.solution {
+    color: green;
+}
+
+div.problems-solution p.large {
+    font-size: large;
+}
+
+div.howto h3 {
+    margin-top: 40px;
+}
