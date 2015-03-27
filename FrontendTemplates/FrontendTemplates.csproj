@@ -726,6 +726,7 @@
     <Content Include="Scripts\demo.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\app.js.bundle" />
+    <None Include="Properties\PublishProfiles\frontend.test-boommy.ru.pubxml" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
