@@ -3,15 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @{
-        var bundleOption = (BundleOptions)ViewBag.BundleOption;
-    }
+    <title>@ViewBag.Title - ServiceStack Bundler in action</title>
 
-    @Html.RenderCssBundle("~/Content/app.css.bundle", bundleOption)
+    @Html.CustomRenderCssBundle("~/Content/app.css.bundle")
 
-    @Html.RenderJsBundle("~/Scripts/dist.js.bundle", bundleOption)
-    @Html.RenderJsBundle("~/Scripts/app.js.bundle", bundleOption)
+    @Html.CustomRenderJsBundle("~/Scripts/dist.js.bundle")
+    @Html.CustomRenderJsBundle("~/Scripts/app.js.bundle")
 </head>
 <body>
     @{

@@ -8,5 +8,5 @@ $(function () {
         .replace(/\n{2,}/g, "\n")
         .replace(/\n/g, "<br/>"); // add line-breaks
 
-    $("pre").html(headHtml);
+    $("#head-code").html(headHtml);
 });
