@@ -49,9 +49,9 @@
 <pre>
     using ServiceStack.Html;
 
-    @@Html.RenderCssBundle("~/Content/app.css.bundle", BundleOptions.@Model.ToString())
-    @@Html.RenderJsBundle("~/Scripts/dist.js.bundle", BundleOptions.@Model.ToString())
-    @@Html.RenderJsBundle("~/Scripts/app.js.bundle", BundleOptions.@Model.ToString())
+    @@Html.RenderCssBundle("<a href="https://github.com/andreypesoshin/frontend-templates/blob/master/FrontendTemplates/Content/app.css.bundle">~/Content/app.css.bundle</a>", BundleOptions.@Model.ToString())
+    @@Html.RenderJsBundle("<a href="https://github.com/andreypesoshin/frontend-templates/blob/master/FrontendTemplates/Scripts/dist.js.bundle">~/Scripts/dist.js.bundle</a>", BundleOptions.@Model.ToString())
+    @@Html.RenderJsBundle("<a href="https://github.com/andreypesoshin/frontend-templates/blob/master/FrontendTemplates/Scripts/app.js.bundle">~/Scripts/app.js.bundle</a>", BundleOptions.@Model.ToString())
 </pre>
 
 <h2>Result code</h2>

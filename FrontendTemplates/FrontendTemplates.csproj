@@ -702,9 +702,6 @@
     <Content Include="bundler\node_modules\coffee-script\package.json" />
     <Content Include="bundler\LICENSE" />
     <Content Include="bundler\coffee.cmd" />
-    <None Include="Content\app.css.bundle">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -730,6 +727,7 @@
     <Content Include="Scripts\app.js.bundle">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\app.css.bundle" />
     <None Include="Properties\PublishProfiles\frontend.test-boommy.ru.pubxml" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
