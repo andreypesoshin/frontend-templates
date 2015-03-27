@@ -702,7 +702,9 @@
     <Content Include="bundler\node_modules\coffee-script\package.json" />
     <Content Include="bundler\LICENSE" />
     <Content Include="bundler\coffee.cmd" />
-    <None Include="Content\app.css.bundle" />
+    <None Include="Content\app.css.bundle">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -725,7 +727,9 @@
     <Content Include="bundler\bundler.cmd" />
     <Content Include="Scripts\demo.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\app.js.bundle" />
+    <Content Include="Scripts\app.js.bundle">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Properties\PublishProfiles\frontend.test-boommy.ru.pubxml" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
@@ -746,7 +750,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
-    <Content Include="Scripts\dist.js.bundle" />
+    <Content Include="Scripts\dist.js.bundle">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Views\Home\Demo.cshtml" />
     <None Include="Web.Test.config">
       <DependentUpon>Web.config</DependentUpon>
