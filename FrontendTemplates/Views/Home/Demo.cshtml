@@ -27,9 +27,9 @@
 <pre>
     using FrontendTemplates.Extensions;
 
-    @@Html.CustomRenderCssBundle("~/Content/app.css.bundle")
-    @@Html.CustomRenderJsBundle("~/Scripts/dist.js.bundle")
-    @@Html.CustomRenderJsBundle("~/Scripts/app.js.bundle")
+    @@Html.CustomRenderCssBundle("<a href="https://github.com/andreypesoshin/frontend-templates/blob/master/FrontendTemplates/Content/app.css.bundle">~/Content/app.css.bundle</a>")
+    @@Html.CustomRenderJsBundle("<a href="https://github.com/andreypesoshin/frontend-templates/blob/master/FrontendTemplates/Scripts/dist.js.bundle">~/Scripts/dist.js.bundle</a>")
+    @@Html.CustomRenderJsBundle("<a href="https://github.com/andreypesoshin/frontend-templates/blob/master/FrontendTemplates/Scripts/app.js.bundle">~/Scripts/app.js.bundle</a>")
 </pre>
 
 <p>
@@ -57,5 +57,5 @@
 <h2>Result code</h2>
 <p>Please feel free to inspect page source and checkout <strong>&lt;head&gt;</strong> section to confirm that bundles are processed as expected.</p>
 
-Personally for your comfort we have added the <strong>&lt;head&gt;</strong> context into the next block:
+<p>Personally for your comfort we have added the <strong>&lt;head&gt;</strong> context into the next block:</p>
 <pre id="head-code"></pre>
