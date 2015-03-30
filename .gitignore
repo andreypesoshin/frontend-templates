@@ -4,9 +4,9 @@
 *.min.js
 *.min.css
 /*/Content/app.css
+/*/Content/body.css
 /*/Scripts/app.js
 /*/Scripts/dist.js
-
 ###################
 # compiled source #
 ###################
