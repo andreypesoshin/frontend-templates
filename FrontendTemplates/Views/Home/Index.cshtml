@@ -18,9 +18,9 @@
     <div class="col-md-5">
         <h3 class="problems">Problems</h3>
         <ol>
-            <li>Assets (js, css, styles) belong to frontend developers only</li>
+            <li>Assets (js, css, less/sass/stylus/coffee/typescript/etc) belong to frontend developers only</li>
             <li>They use their favorite tools - gulp, node.js - locally on their MacBooks and don't want to share the code</li>
-            <li>Backend developers do not have an abitily to modify assets code without pain</li>
+            <li>Backend developers don't have an abitily to modify assets code without a PAIN</li>
         </ol>
     </div>
     <div class="col-md-5">
@@ -37,7 +37,7 @@
         <ul>
             <li>Frontend machines (Mac OS, Win)</li>
             <li>Backend machines (restricted to Win)</li>
-            <li>Test server (via TeamCity)</li>
+            <li>Test server (setup a step in TeamCity)</li>
             <li>Production server</li>
         </ul>
     </div>
@@ -54,13 +54,13 @@
         <h2>How to...</h2>
         <h3>1. Setup runtime environment</h3>
         <ol>
-            <li>Read official documentation at <a href="https://github.com/ServiceStack/Bundler">ServiceStack Bundler</a> github page</li>
-            <li>Pass through the standard installation steps with NuGet</li>
+            <li>Read official documentation at <a href="https://github.com/ServiceStack/Bundler">ServiceStack Bundler</a> Github page</li>
+            <li>Pass through the standard installation steps with <strong>NuGet</strong></li>
             <li>Force add recently created <strong>bundler</strong> folder to git (remove it from gitignore or both if possible). It contains <strong>bundler.cmd</strong> that you will have to run often and executable files (<strong>node.exe</strong>, for instance) that are usually ignored in .NET projects.</li>
             <li>Think about how you will store asset sources and bundles in your project's folder structure. Think about how will <strong>bundler.cmd</strong> be executed periodically or on demand in your runtime environment.</li>
-            <li>Setup your asset bundles</li>
+            <li>Setup your asset bundles. Use explicit bundling or add carefully <i># options folder:recursive</i> if needed.</li>
             <li><strong>NB!</strong> Store in git only source files and avoid storing intermediate or dynamically rewritten assets (.less.css, .styl.css, .min.css, .min.js, asset bundles, etc)</li>
-            <li>Use this demo's <a href="https://github.com/andreypesoshin/frontend-templates/blob/master/FrontendTemplates/Models/ServiceStackBundlerAttribute.cs">global action filter</a> and <a href="https://github.com/andreypesoshin/frontend-templates/blob/master/FrontendTemplates/Extensions/ServiceStackBundlerHelpers.cs">extension methods</a> to get the sweet syntax sugar helping you to auto-negotiate bundling options via <strong>Web.config</strong> and current environment information.</li>
+            <li>Use this demo's <a href="https://github.com/andreypesoshin/frontend-templates/blob/master/FrontendTemplates/Extensions/ServiceStackBundlerHelpers.cs">extension methods</a> to get the sweet syntax sugar helping you to auto-negotiate bundling options via <strong>AppSettings</strong> or <strong>Debug Mode</strong> originally given from <strong>Web.config</strong> (determining current environment this way).</li>
         </ol>
         <p><strong>Hint:</strong> For sure you can ignore an introduced syntax sugar and integrate ServiceStack in it's standard way if you want or have to do it.</p>
 
@@ -77,13 +77,17 @@
         <h3>3. Frontend developer: Setup development environment</h3>
         <ol>
             <li>Use you favorite Mac (or Win or whatever). Work inside a git repository local copy.</li>
-            <li>Use some Win-based PC to host and run an ASP.NET application. Dev-server will work. Virtual machine, an installation on Test server or your old PC with IIS also will do. Rsync might also needed.</li>
-            <li>Optionally: In order to work with Win PC you'll have to use Razor=>Html converter that isn't tested at the moment. Will come back here soonly.</li>
-            <li>Think about how to run <strong>node bunler.js ...</strong> command as it is done in <a href="https://github.com/andreypesoshin/frontend-templates/blob/master/FrontendTemplates/bundler/bundler.cmd">bundler.cmd</a>. You can have any of the next 4 different setups. YMMV.</li>
-            <li>For instance (setup #1), install node.js and run <strong>node bunler.js ...</strong> on demand when your source files are changed in the filesystem. Use <a href="https://github.com/emcrisostomo/fswatch">fswatch utility</a> to watch for filesystem changes.</li>
-            <li>Another setup (#2) is to run <strong>node bunler.js ...</strong> periodically. For instance, with a timeout of 5 seconds. Works but has a sensible lag and utilizes more computer resources.</li>
-            <li>Another setup (#3) is to have a <strong>gulp watch task</strong> that watches for filesystem changes as it normally does and runs <strong>node bunler.js ...</strong> command.</li>
-            <li>The last setup (#4) is to use custom <strong>gulp task</strong> that performs bundles just like <strong>bundler.js</strong> does. Rendering bundles at Razor (cshtml) side should feel no difference.</li>
+            <li>Use some Win-based PC to host and run an ASP.NET application. Dev-server will work. Virtual machine, an installation on Test server or your old PC with IIS also will do. Rsync setup might also be needed.</li>
+            <li>Optionally: In order to work with Win PC AUTONOMOUSLY you'll have to use Razor=>Html converter that isn't tested at the moment. Will come back here soonly.</li>
+            <li>Think about how to run <strong>node bunler.js ...</strong> command as it is done in <a href="https://github.com/andreypesoshin/frontend-templates/blob/master/FrontendTemplates/bundler/bundler.cmd">bundler.cmd</a>. You can have any of the next different setups. YMMV.
+                <ul>
+                    <li>For instance (setup #1), install node.js and run <strong>node bunler.js ...</strong> on demand when your source files are changed in the filesystem. Use <a href="https://github.com/emcrisostomo/fswatch">fswatch utility</a> to watch for filesystem changes.</li>
+                    <li>Another setup (#2) is to run <strong>node bunler.js ...</strong> periodically. For instance, with a timeout of 5 seconds. Works but has a sensible lag and utilizes more computer resources.</li>
+                    <li>Another setup (#3) is to have a <strong>gulp watch task</strong> that watches for filesystem changes as it normally does and runs <strong>node bunler.js ...</strong> command.</li>
+                    <li>Yet another setup (#4) is to use custom <strong>gulp task</strong> that performs bundles just like <strong>bundler.js</strong> does. Rendering bundles at Razor (cshtml) side should feel no difference. <strong>Not recommended</strong> as it may lead to unpredicatability of bundling process' result.</li>
+                    <li>The final setup (#5) is to add filesystem watcher on the Win PC side that will run right after the rsync finish with it's duties.</li>
+                </ul>
+            </li>
         </ol>
 
         <h3>Conclusion</h3>
