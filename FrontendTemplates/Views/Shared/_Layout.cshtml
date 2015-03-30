@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - ServiceStack Bundler in action</title>
 
-    @Html.CustomRenderCssBundle("~/Content/app.css.bundle")
-
-    @Html.CustomRenderJsBundle("~/Scripts/dist.js.bundle")
-    @Html.CustomRenderJsBundle("~/Scripts/app.js.bundle")
+    @{
+        Html.RenderPartial("_Bundles");
+    }
 </head>
 <body>
     @{

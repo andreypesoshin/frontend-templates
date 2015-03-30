@@ -124,8 +124,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\ServiceStackBundlerExtensions.cs" />
-    <Compile Include="Models\ServiceStackBundlerAttribute.cs" />
+    <Compile Include="Helpers\ServiceStackBundlerHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -752,6 +751,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\Home\Demo.cshtml" />
+    <Content Include="Views\Shared\_Bundles.cshtml" />
     <None Include="Web.Test.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

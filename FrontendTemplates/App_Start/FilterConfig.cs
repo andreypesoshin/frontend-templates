@@ -1,6 +1,5 @@
 ﻿using System.Web;
 using System.Web.Mvc;
-using FrontendTemplates.Models;
 
 namespace FrontendTemplates
 {
@@ -9,7 +8,6 @@ namespace FrontendTemplates
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
-            filters.Add(new ServiceStackBundlerAttribute());
         }
     }
 }

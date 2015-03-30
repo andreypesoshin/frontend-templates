@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using FrontendTemplates.Helpers;
 using ServiceStack.Html;
 
 namespace FrontendTemplates.Controllers
@@ -23,22 +24,22 @@ namespace FrontendTemplates.Controllers
             // (otherwise use default behavior inherited from global filter)
             if (env != null)
             {
-                var bundleOption = BundleOptions.Normal;
+                var bundleOption = @"Normal";
 
                 switch (env)
                 {
                     case "prod":
-                        bundleOption = BundleOptions.MinifiedAndCombined;
+                        bundleOption = @"MinifiedAndCombined";
                         break;
                     case "test":
-                        bundleOption = BundleOptions.Combined;
+                        bundleOption = @"Combined";
                         break;
                 }
 
-                ViewBag.BundleOption = bundleOption;
+                ConfigurationManager.AppSettings["BundleOption"] = bundleOption;
             }
 
-            return View(ViewBag.BundleOption);
+            return View(ServiceStackBundlerHelpers.GetBundleOption());
         }
     }
 }

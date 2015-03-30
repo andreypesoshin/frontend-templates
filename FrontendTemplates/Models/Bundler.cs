@@ -303,7 +303,7 @@ namespace ServiceStack.Html
                 {
                     if (file.StartsWith("#"))
                         continue;
-                    
+
                     var jsFile = file.Trim()
                         .Replace(".coffee", ".js")
                         .Replace(".ls", ".js");
@@ -344,7 +344,7 @@ namespace ServiceStack.Html
                 {
                     if (file.StartsWith("#"))
                         continue;
-                    
+
                     var cssFile = file.Trim()
                         .Replace(".less", ".css")
                         .Replace(".sass", ".css")
@@ -363,7 +363,7 @@ namespace ServiceStack.Html
 
         public static string MapPath(string virtualPath)
         {
-            return HostingEnvironment.MapPath(virtualPath) 
+            return HostingEnvironment.MapPath(virtualPath)
                 ?? (MapPathFallbackFn != null ? MapPathFallbackFn(virtualPath) : null); //Mono can return null
         }
 
