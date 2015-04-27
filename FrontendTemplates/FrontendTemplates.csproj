@@ -813,4 +813,25 @@
   </Target>
   <Target Name="AfterBuild">
   </Target> -->
+  <PropertyGroup>
+    <CopyAllFilesToSingleFolderForMsdeployDependsOn>
+      CustomCollectFiles;
+      $(CopyAllFilesToSingleFolderForMsdeployDependsOn);
+    </CopyAllFilesToSingleFolderForMsdeployDependsOn>
+  </PropertyGroup>
+  <Target Name="CustomCollectFiles">
+    <!-- Copy cshtml files -->
+    <ItemGroup>
+      <ContentCss Include="Content\**\*.css" />
+      <FilesForPackagingFromProject Include="%(ContentCss.Identity)">
+        <DestinationRelativePath>Content\%(RecursiveDir)%(Filename)%(Extension)</DestinationRelativePath>
+      </FilesForPackagingFromProject>
+    </ItemGroup>
+    <ItemGroup>
+      <ScriptsJs Include="Scripts\**\*.js" />
+      <FilesForPackagingFromProject Include="%(ScriptsJs.Identity)">
+        <DestinationRelativePath>Scripts\%(RecursiveDir)%(Filename)%(Extension)</DestinationRelativePath>
+      </FilesForPackagingFromProject>
+    </ItemGroup>
+  </Target>
 </Project>

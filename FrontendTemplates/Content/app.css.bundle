@@ -1,4 +1,4 @@
-﻿#options skipmin,skipremin
+﻿#options skipremin
 bootstrap.css
 Site.css
 body.styl
