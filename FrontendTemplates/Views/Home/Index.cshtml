@@ -57,10 +57,10 @@
             <li>Read official documentation at <a href="https://github.com/ServiceStack/Bundler">ServiceStack Bundler</a> Github page</li>
             <li>Pass through the standard installation steps with <strong>NuGet</strong></li>
             <li>Force add recently created <strong>bundler</strong> folder to git (remove it from gitignore or both if possible). It contains <strong>bundler.cmd</strong> that you will have to run often and executable files (<strong>node.exe</strong>, for instance) that are usually ignored in .NET projects.</li>
-            <li>Think about how you will store asset sources and bundles in your project's folder structure. Think about how will <strong>bundler.cmd</strong> be executed periodically or on demand in your runtime environment.</li>
+            <li>Think about how you will store asset sources and bundles in your project's folder structure. Think about how will <strong>bundler.cmd</strong> be executed in your runtime environment.</li>
             <li>Setup your asset bundles. Use explicit bundling or add carefully <i># options folder:recursive</i> if needed.</li>
             <li><strong>NB!</strong> Store in git only source files and avoid storing intermediate or dynamically rewritten assets (.less.css, .styl.css, .min.css, .min.js, asset bundles, etc)</li>
-            <li>Use this demo's <a href="https://github.com/andreypesoshin/frontend-templates/blob/master/FrontendTemplates/Extensions/ServiceStackBundlerHelpers.cs">extension methods</a> to get the sweet syntax sugar helping you to auto-negotiate bundling options via <strong>AppSettings</strong> or <strong>Debug Mode</strong> originally given from <strong>Web.config</strong> (determining current environment this way).</li>
+            <li>Use this demo's <a href="https://github.com/andreypesoshin/frontend-templates/blob/master/FrontendTemplates/Helpers/ServiceStackBundlerHelpers.cs">extension methods</a> to get the sweet syntax sugar helping you to auto-negotiate bundling options via <strong>AppSettings</strong> or <strong>Debug Mode</strong> originally given from <strong>Web.config</strong> (determining current environment this way).</li>
         </ol>
         <p><strong>Hint:</strong> For sure you can ignore an introduced syntax sugar and integrate ServiceStack in it's standard way if you want or have to do it.</p>
 
